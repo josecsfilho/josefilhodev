@@ -70,31 +70,31 @@ img {
     /* Estilos para a barra de navegação */
     background-color: var(--color-base);
   }
-  
+
   .navbar .nav-link {
     /* Estilos para os links da barra de navegação */
     font-weight: 700;
     text-transform: uppercase;
     color: #fff;
   }
-  
+
   .navbar .nav-link:hover {
     /* Estilos para os links da barra de navegação ao passar o mouse */
     color: var(--color-brand);
   }
-  
+
   .navbar .nav-link.active {
     /* Estilos para o link ativo na barra de navegação */
     color: var(--color-brand);
   }
-  
+
   .navbar-toggler {
     /* Estilos para o botão de alternar da barra de navegação */
     border: none;
     background: transparent;
     cursor: pointer;
   }
-  
+
   .navbar-toggler span {
     /* Estilos para as linhas do botão de alternar */
     display: block;
@@ -104,27 +104,27 @@ img {
     background-color: #fff;
     transition: all 0.3s ease-in-out;
   }
-  
+
   .navbar-toggler span:nth-of-type(2) {
     /* Estilos para a segunda linha do botão de alternar */
     transform: translateY(-8px);
   }
-  
+
   .navbar-toggler.open span:nth-of-type(1) {
     /* Estilos para a primeira linha do botão de alternar quando está aberto */
     transform: translateY(8px) rotate(45deg);
   }
-  
+
   .navbar-toggler.open span:nth-of-type(2) {
     /* Estilos para a segunda linha do botão de alternar quando está aberto */
     opacity: 0;
   }
-  
+
   .navbar-toggler.open span:nth-of-type(3) {
     /* Estilos para a terceira linha do botão de alternar quando está aberto */
     transform: translateY(-8px) rotate(-45deg);
   }
-  
+
   @media (min-width: 992px) {
     /* Estilos para telas maiores que 992px */
     .navbar {
@@ -134,17 +134,17 @@ img {
       background-size: cover;
       background-position: center;
     }
-  
+
     .navbar-brand img {
       /* Estilos para a imagem do logotipo na barra de navegação */
       border: 8px solid var(--color-brand);
     }
-  
+
     #content-wrapper {
       /* Estilos para o contêiner de conteúdo */
       padding-left: var(--sidbar-width);
     }
-  
+
     .my-contact-section {
       /* Estilos para a seção de contato */
       overflow: hidden;
@@ -158,14 +158,14 @@ img {
     padding: 5px 14px;
     font-weight: 700;
   }
-  
+
   .btn-brand {
     /* Estilos para os botões com a classe .btn-brand */
     background-color: var(--color-brand);
     border-color: var(--color-brand);
     color: var(--color-base);
   }
-  
+
   .btn-brand:hover,
   .btn-brand:focus {
     /* Estilos para os botões .btn-brand ao passar o mouse ou receber foco */
@@ -173,13 +173,13 @@ img {
     color: var(--color-base);
     border-color: var(--color-brand2);
   }
-  
+
   .link-custom {
     /* Estilos para links personalizados */
     font-weight: 700;
     position: relative;
   }
-  
+
   .link-custom::after {
     /* Elemento ::after para criar uma linha horizontal animada */
     content: "";
@@ -191,33 +191,33 @@ img {
     top: 110%;
     transition: all 0.4s;
   }
-  
+
   .link-custom:hover::after {
     /* Estilos para a linha horizontal quando o link é hover */
     width: 100%;
   }
-  
+
 /* Cards Skrill e  */
 .service {
     text-align: center;
   }
-  
+
   .card-content {
     display: flex;
     flex-direction: column;
     align-items: center;
   }
-  
+
   .image-container {
     margin-bottom: 10px; /* Espaço entre a imagem e o texto */
   }
-  
+
   .image-container img {
     max-width: 100%; /* Define a largura máxima da imagem como 100% do contêiner */
     height: auto; /* Mantém a proporção da imagem */
     max-height: 100px; /* Define a altura máxima da imagem como 100 pixels (ajuste conforme necessário) */
   }
-  
+
   .text-container {
     text-align: center;
     font-weight: bold;
@@ -257,10 +257,37 @@ img {
 
 #contact .form-control::placeholder {
     color: var(--color-body);
-    
+
 }
 
 #contact input.form-control {
     height: 40px;
     overflow: hidden;
 }
+
+
+/* SOCIAL ICONS */
+
+.social-icons {
+    display: flex;
+    align-items: center;
+  }
+
+  .social-icons a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+    border-radius: 50%;
+    font-size: 40px;
+    transition: transform 0.3s ease-in-out;
+    margin-right: 10px;
+  }
+
+
+.social-icons a:hover {
+    transform: scale(1.2);
+}
+
