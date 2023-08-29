@@ -1,13 +1,18 @@
 {
     "builds": [{
-        "src": "carreiradev/wsgi.py",
+        "src": "josefilhodev/wsgi.py",
         "use": "@vercel/python",
-        "config": { "maxLambdaSize": "15mb", "runtime": "python3.9" }
+        "config": { "maxLambdaSize": "15mb", "runtime": "python11.1" }
     }],
     "routes": [
         {
-            "src": "/(.*)",
-            "dest": "carreiradev/wsgi.py"
+          "src": "/static/(.*)",
+          "dest": "/static/$1"
+        },
+        {
+          "src": "/(.*)",
+          "dest": "josefilhodev/wsgi.py"
         }
-    ]
+    ],
+  "version": 2
 }
