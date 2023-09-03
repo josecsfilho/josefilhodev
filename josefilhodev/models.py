@@ -10,7 +10,7 @@ class Skill(models.Model):
 
     class Meta:
         ordering = ['order']
-        verbose_name_plural = "Skills"  # Nome de exibição plural personalizado
+        verbose_name_plural = "1 - Skills"  # Nome de exibição plural personalizado
 
 class Certificado(models.Model):
     certificado_name = models.CharField(max_length=100)
@@ -23,7 +23,7 @@ class Certificado(models.Model):
 
     class Meta:
         ordering = ['order']
-        verbose_name_plural = "Certificados"  # Nome de exibição plural personalizado
+        verbose_name_plural = "2 - Certificados"  # Nome de exibição plural personalizado
 
 class Educacao(models.Model):
     titulo = models.CharField(max_length=200)
@@ -36,7 +36,7 @@ class Educacao(models.Model):
 
     class Meta:
         ordering = ['order']
-        verbose_name_plural = "Educação"  # Nome de exibição plural personalizado
+        verbose_name_plural = "3 - Educação"  # Nome de exibição plural personalizado
 
 class Experiencia(models.Model):
     cargo = models.CharField(max_length=200)
@@ -50,7 +50,7 @@ class Experiencia(models.Model):
 
     class Meta:
         ordering = ['order']
-        verbose_name_plural = "Experiências"  # Nome de exibição plural personalizado
+        verbose_name_plural = "4 - Experiências"  # Nome de exibição plural personalizado
 
 class Projeto(models.Model):
     titulo = models.CharField(max_length=100)
@@ -63,4 +63,4 @@ class Projeto(models.Model):
 
     class Meta:
         ordering = ['order']
-        verbose_name_plural = "Projetos"  # Nome de exibição plural personalizado
+        verbose_name_plural = "5 - Projetos"  # Nome de exibição plural personalizado
