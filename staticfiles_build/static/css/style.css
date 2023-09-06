@@ -1,0 +1,293 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;500;600;700&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree&family=Overpass+Mono:wght@400;500;600;700&display=swap');
+
+:root {
+    --color-body: #b6cbce;
+    --color-heading: #eef3db;
+    --color-base: #033f47;
+    --color-base2: #022a30;
+    --color-brand: #7FC6A4;
+    --color-brand2: #0a635f;
+    --sidbar-width: 240px;
+    --font-base: "Overpass Mono";
+}
+
+body {
+    background-color: var(--color-base2);
+    color: var(--color-body);
+    font-family: var(--font-base), sans-serif;
+}
+
+h1,h2,h3,h4,h5,h6  {
+    color: var(--color-heading);
+    font-weight: 700;
+}
+
+a {
+    text-decoration: none;
+    color: var(--color-body);
+    transition: all 0.4s ease;
+}
+
+
+a:hover {
+    color: var(--color-brand);
+}
+
+img {
+    width: 100%;
+}
+
+.text-brand {
+    color: var(--color-brand);
+}
+
+.bg-base {
+    background-color: var(--color-base);
+}
+
+.full-height {
+    min-height: 100vh;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 80px;
+    padding-bottom: 80px;
+    border-bottom: 2px solid rgba(255,255,255, 0.1);
+}
+
+.shadow-effect {
+    transition: all 0.5s;
+}
+
+.shadow-effect:hover {
+    box-shadow: -6px 6px 0 0 var(--color-brand);
+}
+
+/* Navbar */
+.navbar {
+    /* Estilos para a barra de navegação */
+    background-color: var(--color-base);
+  }
+
+  .navbar .nav-link {
+    /* Estilos para os links da barra de navegação */
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #fff;
+  }
+
+  .navbar .nav-link:hover {
+    /* Estilos para os links da barra de navegação ao passar o mouse */
+    color: var(--color-brand);
+  }
+
+  .navbar .nav-link.active {
+    /* Estilos para o link ativo na barra de navegação */
+    color: var(--color-brand);
+  }
+
+  .navbar-toggler {
+    /* Estilos para o botão de alternar da barra de navegação */
+    border: none;
+    background: transparent;
+    cursor: pointer;
+  }
+
+  .navbar-toggler span {
+    /* Estilos para as linhas do botão de alternar */
+    display: block;
+    width: 30px;
+    height: 3px;
+    margin: 5px auto;
+    background-color: #fff;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .navbar-toggler span:nth-of-type(2) {
+    /* Estilos para a segunda linha do botão de alternar */
+    transform: translateY(-8px);
+  }
+
+  .navbar-toggler.open span:nth-of-type(1) {
+    /* Estilos para a primeira linha do botão de alternar quando está aberto */
+    transform: translateY(8px) rotate(45deg);
+  }
+
+  .navbar-toggler.open span:nth-of-type(2) {
+    /* Estilos para a segunda linha do botão de alternar quando está aberto */
+    opacity: 0;
+  }
+
+  .navbar-toggler.open span:nth-of-type(3) {
+    /* Estilos para a terceira linha do botão de alternar quando está aberto */
+    transform: translateY(-8px) rotate(-45deg);
+  }
+
+  @media (min-width: 992px) {
+    /* Estilos para telas maiores que 992px */
+    .navbar {
+      min-height: 100vh;
+      width: var(--sidbar-width);
+      background: linear-gradient(rgba(3, 63, 71, 0.8), rgba(3, 63, 71, 0.8));
+      background-size: cover;
+      background-position: center;
+    }
+
+    .navbar-brand img {
+      /* Estilos para a imagem do logotipo na barra de navegação */
+      border: 8px solid var(--color-brand);
+    }
+
+    #content-wrapper {
+      /* Estilos para o contêiner de conteúdo */
+      padding-left: var(--sidbar-width);
+    }
+
+    .my-contact-section {
+      /* Estilos para a seção de contato */
+      overflow: hidden;
+    }
+  }
+
+
+/* BTN */
+.btn {
+    /* Estilos para os botões */
+    padding: 5px 14px;
+    font-weight: 700;
+  }
+
+  .btn-brand {
+    /* Estilos para os botões com a classe .btn-brand */
+    background-color: var(--color-brand);
+    border-color: var(--color-brand);
+    color: var(--color-base);
+  }
+
+  .btn-brand:hover,
+  .btn-brand:focus {
+    /* Estilos para os botões .btn-brand ao passar o mouse ou receber foco */
+    background-color: var(--color-brand2);
+    color: var(--color-base);
+    border-color: var(--color-brand2);
+  }
+
+  .link-custom {
+    /* Estilos para links personalizados */
+    font-weight: 700;
+    position: relative;
+  }
+
+  .link-custom::after {
+    /* Elemento ::after para criar uma linha horizontal animada */
+    content: "";
+    width: 0%;
+    height: 2px;
+    background-color: var(--color-brand);
+    position: absolute;
+    left: 0;
+    top: 110%;
+    transition: all 0.4s;
+  }
+
+  .link-custom:hover::after {
+    /* Estilos para a linha horizontal quando o link é hover */
+    width: 100%;
+  }
+
+/* Cards Skrill e  */
+.service {
+    text-align: center;
+  }
+
+  .card-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .image-container {
+    margin-bottom: 10px; /* Espaço entre a imagem e o texto */
+  }
+
+  .image-container img {
+    max-width: 100%; /* Define a largura máxima da imagem como 100% do contêiner */
+    height: auto; /* Mantém a proporção da imagem */
+    max-height: 100px; /* Define a altura máxima da imagem como 100 pixels (ajuste conforme necessário) */
+  }
+
+  .text-container {
+    text-align: center;
+    font-weight: bold;
+  }
+
+  @media (max-width: 767px) {
+    .col-md-3 {
+      width: 50%; /* Para dispositivos com largura máxima de 767px, ajusta a largura das colunas para 50% */
+    }
+  }
+
+
+/* CARD */
+.card-custom .card-custom-image {
+    overflow: hidden;
+}
+
+.card-custom .card-custom-image img {
+    transition: all 0.4s ease;
+}
+
+.card-custom:hover .card-custom-image img {
+    transform: scale(1.1);
+}
+
+/* CONTACT */
+#contact .form-control {
+    background-color: var(--color-base);
+    border-color: var(--color-base);
+    color: var(--color-body);
+}
+
+#contact .form-control:focus {
+    border-color: var(--color-brand);
+    box-shadow: none;
+}
+
+#contact .form-control::placeholder {
+    color: var(--color-body);
+
+}
+
+#contact input.form-control {
+    height: 40px;
+    overflow: hidden;
+}
+
+
+/* SOCIAL ICONS */
+
+.social-icons {
+    display: flex;
+    align-items: center;
+  }
+
+  .social-icons a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+    border-radius: 50%;
+    font-size: 40px;
+    transition: transform 0.3s ease-in-out;
+    margin-right: 10px;
+  }
+
+
+.social-icons a:hover {
+    transform: scale(1.2);
+}
+
