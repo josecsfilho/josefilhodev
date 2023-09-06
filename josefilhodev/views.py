@@ -27,5 +27,3 @@ def index(request):
                    'experiencias': experiencias, 'projetos': projetos,
                    'projeto_form': projeto_form})
 
-def thanks_page(request):
-    return render(request, 'thanks.html')

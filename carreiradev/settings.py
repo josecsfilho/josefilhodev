@@ -15,12 +15,14 @@ SECRET_KEY = 'django-insecure-799m6s#&zu%-_mf&)cyyn&675d^t9izs$_d00b$rbukcxpm2tq
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['.vercel.app', 'josefilho.tech', 'www.josefilho.tech', '.now.sh', 'localhost', '127.0.0.1']
+ALLOWED_HOSTS = ['.vercel.app', 'www.josefilho.tech', '.now.sh', 'localhost', '127.0.0.1']
 
 
 # Application definition
 
 INSTALLED_APPS = [
+    'jazzmin',
+
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -29,6 +31,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'josefilhodev',
 ]
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -59,6 +62,8 @@ TEMPLATES = [
     },
 ]
 
+
+
 WSGI_APPLICATION = 'carreiradev.wsgi.application'
 
 
@@ -71,17 +76,19 @@ WSGI_APPLICATION = 'carreiradev.wsgi.application'
 #         'NAME': BASE_DIR / 'db.sqlite3',
 #     }
 # }
+
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'verceldb',  # Nome do banco de dados
         'USER': 'default',   # Nome do usuário
-        'PASSWORD': 'X1CmDZAdqt8c',  # Senha do usuário
-        'HOST': 'ep-muddy-moon-72810631.us-east-1.postgres.vercel-storage.com',  # Host do banco de dados
+        'PASSWORD': 'GANUT2qu5rnF',  # Senha do usuário
+        'HOST': 'ep-dark-disk-02685032.us-east-1.postgres.vercel-storage.com',  # Host do banco de dados
         'PORT': '5432',  # Porta do banco de dados
     }
 }
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'carreiradev.settings')
+# os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'carreiradev.settings')
 
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
