@@ -88,7 +88,7 @@ DATABASES = {
         'PORT': '5432',  # Porta do banco de dados
     }
 }
-# os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'carreiradev.settings')
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'carreiradev.settings')
 
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
