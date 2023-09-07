@@ -1,4 +1,4 @@
-
+import redis
 import os
 from pathlib import Path
 
@@ -137,6 +137,24 @@ DATABASES = {
     }
 }
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'carreiradev.settings')
+
+# Configuração do Redis
+REDIS_HOST = os.environ.get("KV_URL")
+REDIS_PORT = 36488  # Você não precisa configurar essa variável, pois ela não está disponível nas variáveis de ambiente que você forneceu.
+REDIS_PASSWORD = "936c95a010964ec6a777c7365630687e"  # Substitua pelo valor correto
+REDIS_TLS = True  # Substitua pelo valor correto
+
+# Configuração de cache
+CACHES = {
+    "default": {
+        "BACKEND": "django_redis.cache.RedisCache",
+        "LOCATION": f"rediss://{REDIS_HOST}:{REDIS_PORT}",
+        "OPTIONS": {
+            "PASSWORD": REDIS_PASSWORD,
+            "SSL": REDIS_TLS,
+        },
+    }
+}
 
 
 # Password validation
