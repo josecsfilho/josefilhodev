@@ -24,6 +24,7 @@ INSTALLED_APPS = [
     'jazzmin',
     'django_admin_logs',
 
+
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
