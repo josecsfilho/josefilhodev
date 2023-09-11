@@ -1,4 +1,4 @@
-import redis
+
 import os
 from pathlib import Path
 
@@ -142,15 +142,15 @@ os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'carreiradev.settings')
 
 
 # Configure o cache
-CACHES = {
-    'default': {
-        'BACKEND': 'django_redis.cache.RedisCache',
-        'LOCATION': "redis://default:936c95a010964ec6a777c7365630687e@honest-hagfish-36488.kv.vercel-storage.com:36488",
-        'OPTIONS': {
-            'CLIENT_CLASS': 'django_redis.client.DefaultClient',
-        }
-    }
-}
+# CACHES = {
+#     'default': {
+#         'BACKEND': 'django_redis.cache.RedisCache',
+#         'LOCATION': "redis://default:936c95a010964ec6a777c7365630687e@honest-hagfish-36488.kv.vercel-storage.com:36488",
+#         'OPTIONS': {
+#             'CLIENT_CLASS': 'django_redis.client.DefaultClient',
+#         }
+#     }
+# }
 
 
 SESSION_ENGINE = "django.contrib.sessions.backends.cache"
