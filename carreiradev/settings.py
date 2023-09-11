@@ -139,24 +139,22 @@ DATABASES = {
 }
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'carreiradev.settings')
 
-# Configuração do Redis
-REDIS_HOST = os.environ.get("KV_URL")
-REDIS_PORT = 36488  # Você não precisa configurar essa variável, pois ela não está disponível nas variáveis de ambiente que você forneceu.
-REDIS_PASSWORD = "936c95a010964ec6a777c7365630687e"  # Substitua pelo valor correto
-REDIS_TLS = True  # Substitua pelo valor correto
 
-# Configuração de cache
+
+# Configure o cache
 CACHES = {
-    "default": {
-        "BACKEND": "django_redis.cache.RedisCache",
-        "LOCATION": f"rediss://{REDIS_HOST}:{REDIS_PORT}",
-        "OPTIONS": {
-            "PASSWORD": REDIS_PASSWORD,
-            "SSL": REDIS_TLS,
-        },
+    'default': {
+        'BACKEND': 'django_redis.cache.RedisCache',
+        'LOCATION': "redis://default:936c95a010964ec6a777c7365630687e@honest-hagfish-36488.kv.vercel-storage.com:36488",
+        'OPTIONS': {
+            'CLIENT_CLASS': 'django_redis.client.DefaultClient',
+        }
     }
 }
 
+
+SESSION_ENGINE = "django.contrib.sessions.backends.cache"
+SESSION_CACHE_ALIAS = "default"
 
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
@@ -177,7 +175,7 @@ AUTH_PASSWORD_VALIDATORS = [
 ]
 
 SESSION_EXPIRE_AT_BROWSER_CLOSE = True
-SESSION_COOKIE_AGE = 300
+SESSION_COOKIE_AGE = 3000
 
 # Internationalization
 # https://docs.djangoproject.com/en/4.2/topics/i18n/
@@ -201,3 +199,4 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles_build', 'static')
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+

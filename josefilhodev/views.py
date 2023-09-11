@@ -1,5 +1,7 @@
 from django.shortcuts import render
 
+
+
 from .models import Skill, Certificado, Educacao, Experiencia, Projeto
 from .forms import CertificadoForm, ProjetoForm
 
@@ -26,4 +28,5 @@ def index(request):
                   {'skills': skills, 'certificados': certificados, 'educacoes': educacoes,
                    'experiencias': experiencias, 'projetos': projetos,
                    'projeto_form': projeto_form})
+
 
